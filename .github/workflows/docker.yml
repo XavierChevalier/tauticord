@@ -60,10 +60,10 @@ jobs:
           push: true
           platforms: linux/amd64,linux/armhf,linux/arm64
           tags: |
-            nwithan8/tauticord:latest
-            nwithan8/tauticord:${{ steps.vars.outputs.version }}
-            ghcr.io/nwithan8/tauticord:latest
-            ghcr.io/nwithan8/tauticord:${{ steps.vars.outputs.version }}
+            xavierchevalier/tauticord:latest
+            xavierchevalier/tauticord:${{ steps.vars.outputs.version }}
+            ghcr.io/xavierchevalier/tauticord:latest
+            ghcr.io/xavierchevalier/tauticord:${{ steps.vars.outputs.version }}
           labels: |
             org.opencontainers.image.title=tauticord
             org.opencontainers.image.version=${{ steps.vars.outputs.version }}
