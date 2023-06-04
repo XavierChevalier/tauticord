@@ -530,6 +530,11 @@ class DiscordConnector:
                     stat_emoji = stat[0]
                     stat_value = stat[1]
                     channel_name = f"{library_name}"
+                    if stat_emoji == self.emoji_manager.get_emoji(key="episodes"):
+                        channel_name = "TV Shows episodes"
+                    elif stat_emoji == self.emoji_manager.get_emoji(key="tracks"):
+                        channel_name = "Songs"
+
                     if stat_emoji:
                         channel_name = f"{stat_emoji} {channel_name}"
                     logging.info(f"Updating {library_name} voice channel with new library size: {stat_value}")
