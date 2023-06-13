@@ -560,7 +560,7 @@ class DiscordConnector:
                     stat_value = stat[1]
                     channel_name = f"{library_name}"
                     if stat_emoji == self.emoji_manager.get_emoji(key="episodes"):
-                        channel_name = "TV Shows episodes"
+                        channel_name = "Episodes"
                     elif stat_emoji == self.emoji_manager.get_emoji(key="tracks"):
                         channel_name = "Songs"
 
