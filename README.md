@@ -125,6 +125,9 @@ You will need to set the following environment variables:
 | TC_DISCORD_CHANNEL_NAME         | No       | Channel name for updates                                                                                                                                                    | "Tautulli Status"                       |
 | TC_DISCORD_NITRO                | No       | Whether the Discord server has a Nitro subscription (bot will upload custom emojis)                                                                                         | "False"                                 |
 | TC_ALLOW_ANALYTICS              | No       | Allow Anonymous Crash Analytics?                                                                                                                                            | "True"                                  |                
+| TC_VC_PERFORMANCE_CATEGORY_NAME | No       | Name of the performance voice channel category                                                                                                                              | "Performance"                  |
+| TC_MONITOR_CPU                  | No       | Whether to monitor CPU performance (see [Performance Monitoring](#performance-monitoring))                                                                                  | "False"                                 |
+| TC_MONITOR_MEMORY               | No       | Whether to monitor RAM performance (see [Performance Monitoring](#performance-monitoring))                                                                                  | "False"                                  |
 | TZ                              | No       | Timezone that your server is in                                                                                                                                             | "America/New_York"                      |
 
 You can also set these variables via a configuration file:
@@ -177,6 +180,16 @@ Tauticord uses Google Analytics to collect statistics such as common errors that
 - Settings for Discord or Tautulli, including passwords, API tokens, URLs, etc.
 - Any data from Tautulli
 - Anything typed in Discord.
+
+# Performance Monitoring
+
+Tauticord will attempt to query the system it is running on for CPU and RAM usage every 5 minutes.
+
+Tautulli does not currently offer a way to query performance statistics from its API. As a result, this data is **not Tautulli-specific performance data**, but rather **the performance of the system that Tauticord is running on**. 
+
+If Tauticord is running on the same system as Tautulli, then this data may reflect the performance of Tautulli (+ Tauticord and all other processes running on the system).
+
+If Tauticord is running on a different system than Tautulli, or is running isolated in a Docker container, then this data will not reflect the performance of Tautulli.
 
 # Development
 
@@ -233,26 +246,26 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 75.0; height: 75.0">
+        <a href=https://github.com/benwaco>
+            <img src=https://avatars.githubusercontent.com/u/127471645?v=4 width="50;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=benwaco/>
+            <br />
+            <sub style="font-size:14px"><b>benwaco</b></sub>
+        </a>
+    </td>
+</tr>
+<tr>
+    <td align="center" style="word-wrap: break-word; width: 75.0; height: 75.0">
         <a href=https://github.com/tdurieux>
             <img src=https://avatars.githubusercontent.com/u/5577568?v=4 width="50;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Thomas Durieux/>
             <br />
             <sub style="font-size:14px"><b>Thomas Durieux</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 75.0; height: 75.0">
         <a href=https://github.com/Yoruio>
             <img src=https://avatars.githubusercontent.com/u/38411921?v=4 width="50;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Roy Du/>
             <br />
             <sub style="font-size:14px"><b>Roy Du</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 75.0; height: 75.0">
-        <a href=https://github.com/benwaco>
-            <img src=https://avatars.githubusercontent.com/u/127471645?v=4 width="50;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=benwaco/>
-            <br />
-            <sub style="font-size:14px"><b>benwaco</b></sub>
         </a>
     </td>
 </tr>
