@@ -563,6 +563,8 @@ class DiscordConnector:
                         channel_name = "Episodes"
                     elif stat_emoji == self.emoji_manager.get_emoji(key="tracks"):
                         channel_name = "Songs"
+                    elif stat_emoji == self.emoji_manager.get_emoji(key="artist"):
+                        channel_name = "Artists"
 
                     if stat_emoji:
                         channel_name = f"{stat_emoji} {channel_name}"
